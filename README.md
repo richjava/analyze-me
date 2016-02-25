@@ -32,7 +32,7 @@ Tasks are run with the Grunt command:
 $ grunt
 ```
 
-![analyze-me](richjava.github.com/richjava.github.io/img/analyze-me.PNG)
+![analyze-me](richjava.github.io/img/analyze-me.PNG)
 
 ### Threshold values, rules, and options
 For some of the Grunt tasks, threshold values are set and the task's test won't pass unless these are met.
