@@ -42,7 +42,10 @@ module.exports = function (grunt) {
                     paths: ["/speed/docs/insights/v1/getting_started", "/speed/docs/about"],
                     locale: "en_GB",
                     strategy: "desktop",
-                    threshold: 80 //minimum page speed score
+                    threshold: 80 //minimum page speed score, known issue with 
+                    //threshold scores in grunt-pagespeed (the Grunt processes 
+                    //would stop if the site didn't meet the pagespeed threshold)
+                    //See https://github.com/jrcryer/grunt-pagespeed/issues/26
                 }
             }
         },
@@ -100,7 +103,7 @@ module.exports = function (grunt) {
             }
         }
     });
-    grunt.registerTask('default', ['pagespeed', 'analyzecss', 'csslint', 'jshint', 'htmlhint']);
+    grunt.registerTask('default', ['analyzecss', 'csslint', 'jshint', 'htmlhint', 'pagespeed']);
     //for Travis CI
-    grunt.registerTask('test', ['pagespeed', 'analyzecss', 'csslint', 'jshint', 'htmlhint']);
+    grunt.registerTask('test', ['analyzecss', 'csslint', 'jshint', 'htmlhint', 'pagespeed']);
 };
