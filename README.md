@@ -54,7 +54,7 @@ htmlhint uses the following [rules](https://github.com/yaniswang/HTMLHint/wiki/R
 
 **grunt-pagespeed**
 
-Google Pagespeed uses a threshold overall Speed score to determine whether the site being assessed passed the test or not. At the time of writing, there is a known issue with threshold scores in grunt-pagespeed (the Grunt processes would stop if the site didn't meet the pagespeed threshold - See [here](https://github.com/jrcryer/grunt-pagespeed/issues/26)), so it's recommended not to set it.
+Google Pagespeed uses a threshold overall Speed score to determine whether the site being assessed passed the test or not. At the time of writing, there is a known issue with threshold scores in grunt-pagespeed (the Grunt processes would stop if the site didn't meet the pagespeed threshold - See [here](https://github.com/jrcryer/grunt-pagespeed/issues/26)).
 
 ### Reports
 Currently, analyze-me has support for writing the following reports to a "reports" directory in the project root:
